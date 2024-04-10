@@ -1,0 +1,253 @@
+@import "nullstyle";
+@import "fonts";
+@import "header";
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  &::before {
+    transition: all 0.6s ease 0.6s;
+  }
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.blur {
+  position: relative;
+  filter: blur(5px);
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.hide {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #859ba6;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.5s ease 0s;
+
+  &:hover {
+    background-color: inherit;
+    border: 2px solid #859ba6;
+    color: #859ba6;
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 482px;
+  max-height: 476px;
+  background-color: white;
+  border-radius: 5px;
+  display: none;
+  z-index: 999;
+  .close {
+    width: 22px;
+    height: 22px;
+    margin: 30px 30px 0 0;
+    position: relative;
+    float: right;
+    background-color: inherit;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      border-radius: 2px;
+      background-color: #a1a1a1;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .form {
+    padding: 60px;
+    text-align: center;
+    h3 {
+      line-height: 130%;
+      font-size: 40px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 16px;
+      line-height: 150%;
+      padding: 20px 0 40px 0;
+    }
+
+    .input {
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      display: flex;
+
+      img {
+        width: 26px;
+        height: 18px;
+        margin: auto;
+        margin-left: 20px;
+      }
+
+      input {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        color: #333333;
+        font-size: 16px;
+        line-height: 150%;
+        background-color: transparent;
+
+        &::placeholder {
+          color: #333333;
+        }
+      }
+    }
+
+    .error {
+      border: 1px solid red;
+      background-color: rgba(255, 0, 0, 0.2);
+      input {
+        color: red;
+      }
+    }
+
+    .phone {
+      input {
+        padding-left: 15px;
+      }
+    }
+
+    .button {
+      width: 362px;
+    }
+
+    .personal {
+      font-size: 13px;
+      text-align: left;
+    }
+  }
+
+  .succes {
+    display: none;
+    text-align: center;
+
+    &__content {
+      padding: 60px 80px;
+    }
+
+    &__img {
+      margin: auto;
+      max-width: 80px;
+      img {
+        max-width: 100%;
+      }
+    }
+    h6 {
+      max-width: 220px;
+      font-size: 40px;
+      line-height: 130%;
+      padding: 30px 0 20px 0;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.cookies {
+  position: fixed;
+  right: 60px;
+  bottom: 40px;
+  max-width: 460px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 500;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    p {
+      margin-right: 20px;
+      max-width: 280px;
+      font-size: 16px;
+      line-height: 130%;
+
+      a {
+        color: #859ba6;
+        text-decoration: underline;
+      }
+    }
+
+    button {
+      width: 100px;
+      height: 45px;
+      border: 2px solid #859ba6;
+      color: #859ba6;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 5px;
+      background-color: inherit;
+      transition: all 0.5s ease 0s;
+
+      &:hover {
+        background-color: #859ba6;
+        color: white;
+      }
+    }
+  }
+}
+
+.show {
+  display: block;
+}
+
+@import "swiper";
+@import "footer";
+
+@import "media";
