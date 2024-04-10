@@ -389,6 +389,15 @@ body::before {
   color: red;
 }
 
+.popup .form .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .popup .form .phone input {
   padding-left: 15px;
 }
