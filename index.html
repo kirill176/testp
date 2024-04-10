@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20240410170119" />
+  <title>TestProject</title>
+</head>
+
+
+  <body>
+    <div id="root" class="wrapper">
+      <header class="header">
+  <div class="header__content">
+    <div class="header__logo">
+      <a href=""><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" /></picture></a>
+    </div>
+    <div class="header__list">
+      <li><a href="">Компанія</a></li>
+      <li><a href="">Продукція</a></li>
+      <li><a href="">Статті</a></li>
+      <li><a href="">Рішення</a></li>
+      <li><a href="">Контакти</a></li>
+    </div>
+    <div class="header__buttons">
+      <div class="number">
+        <p>0 (800) 00-00-00</p>
+      </div>
+      <button class="button call">Зв'язатись</button>
+      <div class="language">
+        <button class="ua active">UA</button>
+        <button class="ru">RU</button>
+      </div>
+      <div class="header__burger"></div>
+    </div>
+  </div>
+</header>
+
+      <main>
+        <div class="slider">
+          <div class="swiper">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <div class="popup">
+      <button class="close"></button>
+      <form action="submit" class="form">
+        <h3>Залишайте заявку</h3>
+        <p>Ми зв'яжемося з вами найближчим часом</p>
+        <div class="name input">
+          <input type="text" name="name" placeholder="Ваше ім'я*" />
+        </div>
+        <div class="phone input">
+          <picture><source srcset="img/ukr.webp" type="image/webp"><img src="img/ukr.png" alt="" /></picture>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+380-00-000-00-00"
+            required
+          />
+        </div>
+        <button class="button submit">Відправить</button>
+        <p class="personal">
+          Натискаючи кнопку “Надіслати”, ви погоджуєтесь з Правилами обробки
+          персональних даних.
+        </p>
+      </form>
+      <div class="succes">
+        <div class="succes__content">
+          <div class="succes__img">
+            <picture><source srcset="img/succes.webp" type="image/webp"><img src="img/succes.png" alt="" /></picture>
+          </div>
+          <h6>Дякуємо за заявку</h6>
+          <p>Ваші дані успішно надіслані!</p>
+        </div>
+      </div>
+    </div>
+    <div class="cookies">
+      <div class="cookies__content">
+        <p>
+          Використовуючи цей сайт, ви даєте згоду на роботу з файлами
+          <a href=""> сookies</a>.
+        </p>
+        <button class="accept">Згоден</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/app.min.js?_v=20240410170119"></script>
+</html>
